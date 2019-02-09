@@ -3,6 +3,9 @@ items:
 - apiVersion: extensions/v1beta1
   kind: Ingress
   metadata:
+      annotations:
+        nginx.ingress.kubernetes.io/rewrite-target:  /
+        nginx.ingress.kubernetes.io/ssl-redirect:    "false"
     name: ingress-pay
     namespace: critical-space
   spec:
