@@ -1,0 +1,23 @@
+apiVersion: v1
+items:
+- apiVersion: extensions/v1beta1
+  kind: Ingress
+  metadata:
+    name: ingress-pay
+    namespace: critical-space
+  spec:
+    rules:
+    - http:
+        paths:
+        - backend:
+            serviceName: pay-service
+            servicePort: 8282
+          path: /pay
+  status:
+    loadBalancer:
+      ingress:
+      - {}
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
