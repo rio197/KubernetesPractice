@@ -11,7 +11,7 @@ items:
         paths:
         - backend:
             serviceName: pay-service
-            servicePort: 8282
+            servicePort: 8080
           path: /pay
   status:
     loadBalancer:
